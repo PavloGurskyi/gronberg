@@ -1,3 +1,4 @@
+/* Кнопка */
 .button {
   border-radius: 100px;
   border: 1px solid var(--text-primary);
@@ -8,16 +9,45 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
-
 .button path {
+  transition: stroke 0.3s;
   stroke: var(--text-primary);
 }
-
 .button:hover {
   background-color: var(--text-primary);
   color: var(--text-inverse);
 }
 .button:hover path {
   stroke: var(--text-inverse);
+}
+
+/* посилання зі стрілкою */
+.arrow-link {
+  font-size: 18px;
+  line-height: 1.2;
+  display: inline-flex;
+  gap: 12px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+.arrow-link--left {
+  flex-direction: row-reverse;
+}
+.arrow-link--left svg {
+  rotate: 180deg;
+}
+.arrow-link path {
+  transition: stroke 0.3s;
+  stroke: var(--text-default);
+}
+.arrow-link:hover {
+  color: var(--text-primary);
+}
+.arrow-link:hover path {
+  stroke: var(--text-primary);
 }
